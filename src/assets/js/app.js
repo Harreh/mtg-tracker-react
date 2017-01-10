@@ -1,4 +1,3 @@
-import React from 'react';
-import Game from './components/Game.js'
+import Game from './components/Game';
 
-React.render(<Game />, document.querySelector('#app'));
+ReactDOM.render(<Game name="harry" />, document.querySelector('#app'));
