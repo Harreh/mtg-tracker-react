@@ -1,3 +1,8 @@
+.players-container {
+  display: flex;
+  justify-content: center;
+}
+
 .player-component {
   background: #4699ED;
   margin: 15px;
@@ -6,16 +11,42 @@
   height: 500px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .player-name {
-  font-size: 35px;
+  align-self: center;
+
+  p {
+    font-size: 35px;
+  }
+
+  .material-icons {
+    cursor: pointer;
+  }
 }
 
 .player-life {
   font-size: 25px;
+  align-self: center;
 }
 
-.players-container {
-  display: flex;
+.player-buttons {
+  align-self: center;
+
+  button {
+    margin: 4px;
+    border: 0;
+    height: 50px;
+    width: 50px;
+  }
+
+}
+
+.button-plus {
+  background: green;
+}
+
+.button-minus {
+  background: red;
 }
