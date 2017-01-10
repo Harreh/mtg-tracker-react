@@ -9,7 +9,7 @@ export default class Player extends React.Component {
                 <p className="player-life">{this.props.life}</p>
 
                 <PlayerLifeButtons
-                    onClick={value => this.props.onClick(value, this.props.id)}
+                    onClick={amount => this.props.onClick(amount, this.props.id)}
                 />
             </div>
         );

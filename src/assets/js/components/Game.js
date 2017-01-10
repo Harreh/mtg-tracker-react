@@ -51,7 +51,7 @@ export default class Game extends React.Component {
             <div>
                 <h1>mtg tracker react</h1>
 
-                <div>
+                <div className="players-container">
                     { players }
                 </div>
             </div>

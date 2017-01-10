@@ -1,3 +1,21 @@
-body {
-  margin-top: 10px;
+.player-component {
+  background: #4699ED;
+  margin: 15px;
+  padding: 5px;
+  width: 340px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.player-name {
+  font-size: 35px;
+}
+
+.player-life {
+  font-size: 25px;
+}
+
+.players-container {
+  display: flex;
 }
