@@ -3,15 +3,11 @@ import PlayerName from './PlayerName';
 
 export default class Player extends React.Component {
 
-    editName() {
-
-    }
-
     render() {
         return(
             <div className="player-component">
 
-                <PlayerName name={this.props.name}/>
+                <PlayerName name={this.props.name} nameChanged={(e) => this.props.nameChanged(e, this.props.id)} />
 
                 <p className="player-life">{this.props.life}</p>
 

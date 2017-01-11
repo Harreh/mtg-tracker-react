@@ -27,7 +27,7 @@
 }
 
 .player-life {
-  font-size: 25px;
+  font-size: 45px;
   align-self: center;
 }
 
@@ -37,8 +37,9 @@
   button {
     margin: 4px;
     border: 0;
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
+    font-size: 25px;
   }
 
 }

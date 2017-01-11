@@ -5,7 +5,7 @@ export default class PlayerNameEditButton extends React.Component {
         return (
             <MaterialIcon
                 name="mode_edit"
-                onClick={this.onClick}
+                onClick={this.props.onClick}
             />
         );
     }
