@@ -45,6 +45,10 @@ export default class Game extends React.Component {
         const index = this.getPlayerIndexById(id);
 
         players[index].life = players[index].life + value;
+
+        this.setState({
+            players
+        });
     }
 
     nameChanged(e, id) {
