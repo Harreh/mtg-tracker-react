@@ -20,11 +20,11 @@ export default class PlayerName extends React.Component {
     render() {
         return (
             <div className="player-name">
-                <p className={this.state.isEdit ? 'hide' : ''}>
+                <span className={this.state.isEdit ? 'hide' : ''}>
                     {this.props.name}
-                </p>
-                <PlayerNameEditButton onClick={this.editName} />
+                </span>
                 <input type="text" className={this.state.isEdit ? '' : 'hide'} value={this.props.name} onChange={this.props.nameChanged} />
+                <PlayerNameEditButton onClick={this.editName} />
             </div>
         );
     }

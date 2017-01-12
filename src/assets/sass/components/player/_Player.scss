@@ -1,0 +1,58 @@
+.players-container {
+  display: flex;
+  justify-content: center;
+}
+
+.player-component {
+  background: #D0D0D0;
+  margin: 15px;
+  padding: 5px;
+  width: 340px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 3px 13px rgba(0, 0, 0, .6)
+}
+
+.player-name {
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    font-size: 45px;
+    border: 1px solid black;
+    width: 100%;
+  }
+
+  span {
+    font-size: 35px;
+  }
+
+  .material-icons {
+    cursor: pointer;
+    margin: auto;
+  }
+}
+
+.player-life {
+  font-size: 45px;
+  align-self: center;
+}
+
+.player-buttons {
+  align-self: center;
+
+  button {
+    margin: 4px;
+    border: 0;
+    height: 100px;
+    width: 100px;
+    font-size: 25px;
+  }
+}
+
+.btn-default {
+  border-radius: 0;
+}

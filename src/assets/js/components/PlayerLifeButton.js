@@ -22,7 +22,7 @@ export default class PlayerLifeButton extends React.Component {
 
     render() {
         return (
-            <button className={this.getClassName()} onClick={() => this.props.onClick(this.props.amount)}>
+            <button className="btn btn-default" onClick={() => this.props.onClick(this.props.amount)}>
                 {this.getButtonText()}
             </button>
         );

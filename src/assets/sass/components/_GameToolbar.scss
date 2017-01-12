@@ -1,0 +1,20 @@
+.game-toolbar {
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+
+  .material-icons {
+    margin: auto 5px;
+    cursor: pointer;
+  }
+
+  .bootstrap-select {
+    margin: 5px;
+  }
+
+}
+
+.dropdown-menu > li > a {
+  padding: 2px 12px;
+}

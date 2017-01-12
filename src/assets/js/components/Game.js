@@ -1,4 +1,5 @@
 import Player from './Player';
+import GameToolbar from './toolbar/GameToolbar';
 
 export default class Game extends React.Component {
     constructor(props) {
@@ -8,8 +9,11 @@ export default class Game extends React.Component {
         this.nameChanged = this.nameChanged.bind(this);
         this.getPlayerIndexById = this.getPlayerIndexById.bind(this);
         this.setPlayerName = this.setPlayerName.bind(this);
+        this.addPlayer = this.addPlayer.bind(this);
 
         this.state = {
+            newLifeTotal: 20,
+
             players: [
                 { name: 'Harry', life: 20, id: 1 },
                 { name: 'n00b', life: 20, id: 2 }
@@ -55,6 +59,22 @@ export default class Game extends React.Component {
         this.setPlayerName(e.target.value, id);
     }
 
+    addPlayer() {
+        const players = this.state.players;
+
+        const id = players.length + 1;
+
+        players.push({
+            name: 'Player ' + id,
+            id: id,
+            life: this.state.newLifeTotal
+        });
+
+        this.setState({
+            players
+        });
+    }
+
     renderPlayers(players) {
         if (players.length == 0) {
             return [];
@@ -77,7 +97,10 @@ export default class Game extends React.Component {
 
         return (
             <div>
-                <h1>mtg tracker react</h1>
+                <GameToolbar
+                    onResetGame={this.resetGame}
+                    onAddPlayer={this.addPlayer}
+                />
 
                 <div className="players-container">
                     { players }
