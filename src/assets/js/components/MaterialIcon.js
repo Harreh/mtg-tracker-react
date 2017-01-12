@@ -1,7 +1,7 @@
 export default class MaterialIcon extends React.Component {
     render() {
         return (
-            <i className="material-icons" onClick={this.props.onClick}>{this.props.name}</i>
+            <i className="material-icons">{this.props.name}</i>
         );
     }
 }
