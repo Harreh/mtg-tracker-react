@@ -10,13 +10,17 @@ export default class Game extends React.Component {
         this.getPlayerIndexById = this.getPlayerIndexById.bind(this);
         this.setPlayerName = this.setPlayerName.bind(this);
         this.addPlayer = this.addPlayer.bind(this);
+        this.resetGame = this.resetGame.bind(this);
+        this.setPlayersCount = this.setPlayersCount.bind(this);
+        this.setNewLifeTotal = this.setNewLifeTotal.bind(this);
 
         this.state = {
             newLifeTotal: 20,
+            newPlayersCount: 2,
 
             players: [
-                { name: 'Harry', life: 20, id: 1 },
-                { name: 'n00b', life: 20, id: 2 }
+                { name: 'Player 1', life: 20, id: 1 },
+                { name: 'Player 2', life: 20, id: 2 }
             ]
         };
     }
@@ -92,6 +96,35 @@ export default class Game extends React.Component {
         ));
     }
 
+    resetGame() {
+        const playersCount = this.state.newPlayersCount;
+        const lifeTotal = this.state.newLifeTotal;
+
+        const players = [];
+
+        for (let i = 1; i <= playersCount; i++) {
+            players.push({
+                name: 'Player ' + i,
+                life: lifeTotal,
+                id: i
+            });
+        }
+
+        this.setState({ players });
+    }
+
+    setPlayersCount(e) {
+        this.setState({
+            newPlayersCount: e.target.value
+        });
+    }
+
+    setNewLifeTotal(e) {
+        this.setState({
+            newLifeTotal: e.target.value
+        });
+    }
+
     render() {
         const players = this.renderPlayers(this.state.players);
 
@@ -100,7 +133,8 @@ export default class Game extends React.Component {
                 <GameToolbar
                     onResetGame={this.resetGame}
                     onAddPlayer={this.addPlayer}
-                />
+                    onPlayersCountChange={this.setPlayersCount}
+                    onLifeOptionChange={this.setNewLifeTotal} />
 
                 <div className="players-container">
                     { players }

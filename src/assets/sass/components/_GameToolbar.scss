@@ -11,6 +11,14 @@
   .bootstrap-select {
     margin: 5px;
   }
+
+  .material-icons {
+    font-size: 45px;
+  }
+}
+
+.bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+    width: 75px;
 }
 
 .dropdown-menu > li > a {
