@@ -1,4 +1,4 @@
-import MaterialIcon from './MaterialIcon';
+import MaterialIcon from '../MaterialIcon';
 
 export default class PlayerNameEditButton extends React.Component {
     render() {

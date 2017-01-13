@@ -1,4 +1,4 @@
-import Player from './Player';
+import Player from './player/Player';
 import GameToolbar from './toolbar/GameToolbar';
 
 export default class Game extends React.Component {
